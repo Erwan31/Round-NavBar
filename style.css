@@ -69,6 +69,20 @@ nav{
         height: 100vh;
         width: 100%;
         flex-direction: column;
-        display: none;
+        /*display: none;*/
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
     }
+
+    .nav-links.open{
+        clip-path: circle(1200px at 90% -10%);
+        -webkit-clip-path: circle(1200px at 90% -10%);
+    }
+
+    .landing{
+        flex-direction: column;
+    }
+
+
 }
