@@ -42,14 +42,14 @@ nav{
     font-size: 50px;
 }
 
-@media screen and (max-width: 768px){
+.hamburger,
+.line,
+.line::before,
+.line::after{
+    display: none;
+}
 
-    .line{
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 5px;
-    }
+@media screen and (max-width: 768px){
 
     nav{
         position: relative;
@@ -57,11 +57,45 @@ nav{
 
     .hamburger{
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
         cursor: pointer;
         right: 5%;
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
+        border: 3px solid white;
+    }
+
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .line::before,
+    .line::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .line::before{
+        margin-bottom: 15px;
+    }
+
+    .line::after{
+        margin-bottom: -15px;
     }
 
     .nav-links{
