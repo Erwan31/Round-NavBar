@@ -91,11 +91,11 @@ nav{
     }
 
     .line::before{
-        margin-bottom: 15px;
+        top: 12px;
     }
 
     .line::after{
-        margin-bottom: -15px;
+        bottom: 12px;
     }
 
     .nav-links{
