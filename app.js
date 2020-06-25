@@ -9,6 +9,7 @@ burger.addEventListener('click', () => {
         link.classList.toggle("fade");
     })
 
-    line.classList.toggle('open');
+    line.classList.toggle('active');
+    
 
 })
